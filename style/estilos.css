@@ -8,4 +8,16 @@
 
 .navbar{
 background-color: #1f4cd1;
+color: white;
+}
+
+.container-xxl{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
