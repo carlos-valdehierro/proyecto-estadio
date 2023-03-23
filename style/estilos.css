@@ -5,3 +5,33 @@
 .carousel-inner{
     border-radius: 10px;
 }
+
+#menu, #menu a{
+    background-color: #1f4cd1;
+    color: white;
+}
+
+.container-xxl{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.ps-7{
+    padding-left: 9.5rem;
+}
+
+h1{
+    color: #1f4cd1;
+}
+
+.container img{
+    max-width: 80%;
+}
