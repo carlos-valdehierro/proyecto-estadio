@@ -1,9 +1,11 @@
 .carousel{
     margin-top: 10%;
-    margin-left: 25%;
     width: 50%;
 }
-
 .carousel-inner{
     border-radius: 10px;
+}
+.container-md{
+display: flex;
+justify-content: center;
 }
