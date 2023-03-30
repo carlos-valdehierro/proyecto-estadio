@@ -1,7 +1,7 @@
 .carousel{
     margin-top: 10%;
+    width: 50%;
 }
-
 .carousel-inner{
     border-radius: 10px;
 }
@@ -34,4 +34,8 @@ h1{
 
 .container img{
     max-width: 80%;
+}
+.container-md{
+display: flex;
+justify-content: center;
 }
