@@ -6,6 +6,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
+  <script src="..\js\script.js"></script>
   <title>Preguntas y Respuestas</title>
 </head>
 
@@ -41,47 +42,68 @@
         </div>
     </nav>
 </div>
-  <div class="card" style="width: 18rem">
-    <img src="../img/bernabeu 1947.jfif" class="card-img-top" alt="Estadio Santiago Bernabéu">
-    <div class="card-body">
-      <h5 class="card-title">1- ¿Cuando se creó el Estadio Santiago Bernabéu?</h5>
-      <p class="card-text">Elija una de las siguientes preguntas.</p>
+  <form>
+    <div class="card" style="width: 18rem">
+      <img src="../img/bernabeu 1947.jfif" class="card-img-top" alt="Estadio Santiago Bernabéu">
+      <div class="card-body">
+        <h5 class="card-title">1- ¿Cuando se creó el Estadio Santiago Bernabéu?</h5>
+        <p class="card-text">Elija una de las siguientes preguntas.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="RespuestaP1-1">
+            <label class="form-check-label" for="RespuestaP1-1">
+              14 de Diciempre de 1947
+              <!-- Respuesta correcta -->
+            </label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="RespuestaP1-2">
+            <label class="form-check-label" for="RespuestaP1-2">
+              26 de Noviembre de 1944
+            </label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="RespuestaP1-3"> <!-- el i d es RespuestaP{nº pregunta} - {nº respuesta} -->
+            <label class="form-check-label" for="RespuestaP1-3">
+              10 de Diciembre de 1944
+            </label>
+          </div>
+        </li>
+      </ul>
+      <div class="card-body">
+        <!-- El code de abajo debe crear un parrafo con un a explicacion tras responder (Javascript)-->
+        <button type="button" class="btn btn-secundary btn-sm" onclick="comprobarCorrecta('pregunta1')">Revisar respuesta</button>
+        <!-- El code de abajo pasa a la pregunta siguiente -->
+        <button type="submit" class="btn btn-primary btn-sm">Siguiente</button>
+      </div>
     </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="RespuestaP1-1">
-          <label class="form-check-label" for="RespuestaP1-1">
-            14 de Diciempre de 1947
-            <!-- Respuesta correcta -->
-          </label>
+  </form>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="hasAcertadoToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">      
+      <div class="d-flex">
+        <div class="toast-body">
+          ¡Has acertado!
         </div>
-      </li>
-      <li class="list-group-item">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="RespuestaP1-2">
-          <label class="form-check-label" for="RespuestaP1-2">
-            26 de Noviembre de 1944
-          </label>
-        </div>
-      </li>
-      <li class="list-group-item">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="RespuestaP1-3"> <!-- el i d es RespuestaP{nº pregunta} - {nº respuesta} -->
-          <label class="form-check-label" for="RespuestaP1-3">
-            10 de Diciembre de 1944
-          </label>
-        </div>
-      </li>
-    </ul>
-    <div class="card-body">
-      <!-- El code de abajo debe crear un parrafo con un a explicacion tras responder (Javascript)-->
-      <button type="button" class="btn btn-secundary btn-sm">Revisar respuesta</button>
-      <!-- El code de abajo pasa a la pregunta siguiente -->
-      <button type="submit" class="btn btn-primary btn-sm">Siguiente</button>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
     </div>
   </div>
-
+  <div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+    <div id="hasFalladoToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          ¡Has fallado!
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
